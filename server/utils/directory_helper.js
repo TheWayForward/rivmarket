@@ -4,21 +4,21 @@ let config = require("../config");
 let root = "/public";
 let global = `${config.protocol}${config.host}:${config.port}`;
 
-function replace_divide(dirname) {
-    for(let i = 0; i < dirname.length; i++) {
-        if (dirname[i] == "\\") {
-            dirname[i] = "/"
-        }
-    }
-    return dirname;
+function replace(filepath) {
+    return filepath.replace(/\\/g,"\\\\");
 }
 
 function generate_filepath_for_user_avatar(filepath) {
-    filepath = filepath.replace(/\\/g,"\\\\");
+    filepath = replace(filepath);
+    return `${global}/${filepath.slice(7)}`;
+}
+
+function generate_filepath_for_commodity_poster(filepath) {
+    filepath = replace(filepath);
     return `${global}/${filepath.slice(7)}`;
 }
 
 module.exports = {
-    replace_divide: replace_divide,
-    generate_filepath_for_user_avatar: generate_filepath_for_user_avatar
+    generate_filepath_for_user_avatar: generate_filepath_for_user_avatar,
+    generate_filepath_for_commodity_poster: generate_filepath_for_commodity_poster
 }
