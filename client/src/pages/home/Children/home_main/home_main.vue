@@ -31,7 +31,7 @@
                                      v-if="!this.commodity_array_1[0] && !this.commodity_array_2[0] && !this.commodity_array_3[0]">
                                     <div class="col-lg-2"></div>
                                     <div class="col-lg-8">
-                                        <img class="w-100" style="opacity:0.7;"
+                                        <img class="w-100 h-100" style="opacity:0.7;"
                                              src="../../../../common/img/empty.png"
                                              alt="">
                                     </div>
@@ -161,7 +161,7 @@
                                 <div class="w-100 d-flex">
                                     <div class="round-5 overflow-hidden shadow mr-4 disabled"
                                          style="width:64px;height:64px;">
-                                        <img class="bd-placeholder-img rounded h-100" :src="item.poster">
+                                        <img class="bd-placeholder-img rounded" style="object-fit: cover;" :src="item.poster">
                                     </div>
                                     <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray text-justify cursor-pointer"
                                        @click="goto_commodity_view(item)">

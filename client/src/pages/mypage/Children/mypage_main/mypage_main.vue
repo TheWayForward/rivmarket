@@ -7,7 +7,7 @@
                         <!-- user info left panel -->
                         <div class="my-3 p-3 bg-white rounded shadow col-lg-3" style="height:100%;">
                             <div class="align-items-center text-center p-3 my-3 text-white-50 bg-white rounded shadow col-lg-12 rainbow">
-                                <img id="avatar" class="shadow round-5 bg-white w-100"
+                                <img id="avatar" class="shadow round-5 bg-white w-100 h-100"
                                      :src="this.user_info.avatar" alt="">
                                 <div class="lh-100 mt-3">
                                     <h4 class="text-white lh-100 font-weight-bold" style="letter-spacing:1px;">
